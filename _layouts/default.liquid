@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ page.title }} - neosam's dev blog</title>
+  <link rel="stylesheet" type="text/css" href="{{ site.base_url }}/static/style.css">
+  <link rel="stylesheet"
+        href="{{ site.base_url }}/static/styles/dark.css">
+  <link rel="alternative"
+        type="application/rss+xml"
+        title="Blog feed"
+        href="{{ site.base_url }}/rss.xml" />
+  <script src="{{ site.base_url }}/static/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+ </head>
+ <body>
+  <div class="container">
+    <header>
+     <h1><a href="{{ site.base_url }}">neosam's dev blog</a></h1>
+    </header>
+    <main>
+     {% if page.data.outdated %}
+     <p class="outdated">Warning:  This content is outdated.</p>
+     {% endif %}
+     <h2>{{ page.title }}</h2>
+     <article>
+      {{ page.content }}
+     </article>
+    </main>
+    <footer>
+      <p class="license">The content and the design of this blog is licensed under
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+      <p><a href="{{ site.base_url }}/rss.xml">RSS feed</a></p>
+    </footer>
+  </div>
+ </body>
+</html>

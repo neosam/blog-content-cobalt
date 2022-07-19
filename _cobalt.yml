@@ -1,0 +1,7 @@
+
+site:
+  title: neosam's dev blog
+  description: Which nobody reads anyway
+  base_url: https://neosam.dev
+posts:
+  rss: rss.xml

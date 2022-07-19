@@ -1,0 +1,155 @@
+.container {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.container {
+  font-family: monospace;
+  font-size: 11pt;
+  line-height: 1.5;
+  width: 100%;
+  justify-content: stretch;
+}
+
+header {
+  padding-left:.5em;
+  padding-right: .5em;
+  font-size: 12pt;
+}
+header h1 {
+  font-size: 17pt;
+  margin-top: 0;
+  margin-bottom: 0.1em;
+}
+
+header {
+  text-align: center;
+}
+
+a {
+  color: #F80;
+}
+
+.outdated {
+  width: 100%;
+  border: 3px solid #F00;
+  font-weight: bold;
+  padding: 0.5em;
+  border-radius: 2em;
+}
+
+
+header h1 a {
+  grid-area: title;
+  padding-left: 2em;
+  padding-right: 1em;
+  background-image: url(./neosam.png);
+  background-size: 1.2em;
+  background-repeat: no-repeat;
+  background-position-x: 0.5em;
+  text-decoration: none;
+}
+header h2 {
+  grid-area: section;
+  place-self: center;
+}
+
+main {
+  grid-area: main;
+  margin-left: .5em;
+  margin-right: .5em;
+}
+main article h1 {
+  color: #F80;
+}
+main article h1 a {
+  color: #F80;
+}
+main article footer {
+  color: #AAA;
+}
+
+
+main article {
+  padding-bottom: 2em;
+}
+
+.container > footer {
+  grid-area: footer;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "license license"
+    "privacy software";
+}
+
+.container > footer .license {
+  grid-area: license;
+}
+
+.container > footer .privacy {
+  grid-area: privacy;
+}
+
+.container > footer .software {
+  grid-area: software;
+  font-size: 8px;
+  color: #888;
+  align-self: end;
+  justify-self: end;
+}
+
+@media only screen and (min-width: 746px) { 
+  header {
+    grid-area: header;
+  }
+
+  .container {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto 50em auto;
+    grid-template-rows: auto auto 100px;
+    grid-template-areas:
+      "header header header"
+      ". main ."
+      "footer footer footer";
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+  }
+  
+  .container {
+    background: #333;
+    color: #DDD;
+  }
+
+  header {
+    background: #000;
+  }
+
+  header h1 a {
+    color: #FFF;
+  }
+
+  .container > footer {
+    background-color: #000;
+  }
+  
+  .blackbox-left, .blackbox-right {
+    background-clolr: #000;
+  }
+}
+
